@@ -7,38 +7,39 @@
 
 <!-- NAVIGATION -->
 <div id="navigation-top" class="navigation-top">
- <a href='command:katapod.loadPage?[{"step":"step5"}]'
+ <a href='command:katapod.loadPage?[{"step":"step8"}]'
    class="btn btn-dark navigation-top-left">⬅️ Back
  </a>
-<span class="step-count"> Step 6 of 10</span>
- <a href='command:katapod.loadPage?[{"step":"step7"}]' 
+<span class="step-count"> Step 9 of 10</span>
+ <a href='command:katapod.loadPage?[{"step":"step10"}]'
     class="btn btn-dark navigation-top-right">Next ➡️
   </a>
 </div>
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3</div>
+<div class="step-title">Design query Q4</div>
 
-✅ Find information about all sensors in network `forest-net`:
+✅ Find raw measurements for sensor `s1003` on `2020-07-06`; order by timestamp (desc):
 
 <details>
   <summary>Solution</summary>
 
 ```
-SELECT * 
-FROM sensors_by_network
-WHERE network = 'forest-net';
+SELECT timestamp, value 
+FROM temperatures_by_sensor
+WHERE sensor = 's1003'
+  AND date   = '2020-07-06';
 ```
 
 </details>
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">
- <a href='command:katapod.loadPage?[{"step":"step5"}]'
+ <a href='command:katapod.loadPage?[{"step":"step8"}]'
    class="btn btn-dark navigation-bottom-left">⬅️ Back
  </a>
- <a href='command:katapod.loadPage?[{"step":"step7"}]'
+ <a href='command:katapod.loadPage?[{"step":"step10"}]'
     class="btn btn-dark navigation-bottom-right">Next ➡️
   </a>
 </div>
