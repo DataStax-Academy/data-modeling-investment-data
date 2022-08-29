@@ -18,17 +18,20 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3</div>
+<div class="step-title">Design query Q3.1</div>
 
-✅ Find information about all sensors in network `forest-net`:
+✅ Find all trades for account `joe001`; order by trade date (desc):
 
 <details>
   <summary>Solution</summary>
 
 ```
-SELECT * 
-FROM sensors_by_network
-WHERE network = 'forest-net';
+SELECT account, 
+       TODATE(DATEOF(trade_id)) AS date, 
+       trade_id, type, symbol,
+       shares, price, amount 
+FROM trades_by_a_d
+WHERE account = 'joe001';
 ```
 
 </details>

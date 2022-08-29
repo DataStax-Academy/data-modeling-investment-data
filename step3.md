@@ -22,29 +22,37 @@
 
 ✅ Execute the CQL script to insert sample data:
 ```
-SOURCE 'assets/sensor_data.cql'
+SOURCE 'assets/investment_data.cql'
 ```
 
-✅ Retrieve all rows from table `networks`:
+✅ Retrieve all rows from table `accounts_by_user`:
 ```
-SELECT * FROM networks;        
-```
-
-✅ Retrieve all rows from table `temperatures_by_network`:
-```
-SELECT network, week, date_hour, 
-       sensor, avg_temperature 
-FROM temperatures_by_network;
+SELECT * FROM accounts_by_user;        
 ```
 
-✅ Retrieve all rows from table `sensors_by_network`:
+✅ Retrieve all rows from table `positions_by_account`:
 ```
-SELECT * FROM sensors_by_network;                    
+SELECT * FROM positions_by_account;
 ```
 
-✅ Retrieve all rows from table `temperatures_by_sensor`:
+✅ Retrieve all rows from table `trades_by_a_d`:
 ```
-SELECT * FROM temperatures_by_sensor; 
+SELECT * FROM trades_by_a_d;                    
+```
+
+✅ Retrieve all rows from table `trades_by_a_td`:
+```
+SELECT * FROM trades_by_a_td;
+```
+
+✅ Retrieve all rows from table `trades_by_a_std`:
+```
+SELECT * FROM trades_by_a_std;       
+```
+
+✅ Retrieve all rows from table `trades_by_a_sd`:
+```
+SELECT * FROM trades_by_a_sd;       
 ```
 
 <!-- NAVIGATION -->

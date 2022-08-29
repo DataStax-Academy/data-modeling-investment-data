@@ -39,9 +39,9 @@ astra setup
 astra db list
 ```
 
-✅ Create database `data-modeling` and keyspace `sensor_data` if they do not exist:
+✅ Create database `data-modeling` and keyspace `investment_data` if they do not exist:
 ```
-astra db create data-modeling -k sensor_data --if-not-exist
+astra db create data-modeling -k investment_data --if-not-exist
 ```
 
 ✅ Check the status of database `data-modeling`:
@@ -59,11 +59,11 @@ astra db resume data-modeling
 astra db get data-modeling
 ```
 
-✅ Start the CQL shell and connect to database `data-modeling` and keyspace `sensor_data`:
+✅ Start the CQL shell and connect to database `data-modeling` and keyspace `investment_data`:
 
 ```
 clear
-astra db cqlsh data-modeling -k sensor_data
+astra db cqlsh data-modeling -k investment_data
 ```
 
 If the command fails, please revisit the previous steps to make sure that the database exists and is `ACTIVE`, and retry connecting to the database again.

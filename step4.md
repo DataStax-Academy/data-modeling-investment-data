@@ -20,16 +20,15 @@
 
 <div class="step-title">Design query Q1</div>
 
-✅ Find information about all networks; order by name (asc):
+✅ Find information about all investment accounts of a user with username `joe`:
 
 <details>
   <summary>Solution</summary>
 
 ```
-SELECT name, description,
-       region, num_sensors
-FROM networks
-WHERE bucket = 'all';
+SELECT *
+FROM accounts_by_user
+WHERE username = 'joe';
 ```
 
 </details>

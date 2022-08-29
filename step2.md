@@ -20,57 +20,84 @@
 
 <div class="step-title">Create tables</div>
 
-✅ Create table `networks`:
+✅ Create table `accounts_by_user`:
 ```
-CREATE TABLE IF NOT EXISTS networks (
-  bucket TEXT,
-  name TEXT,
-  description TEXT,
-  region TEXT,
-  num_sensors INT,
-  PRIMARY KEY ((bucket),name)
+CREATE TABLE accounts_by_user (
+  username TEXT,
+  account_number TEXT,
+  cash_balance DECIMAL,
+  name TEXT STATIC,
+  PRIMARY KEY ((username),account_number)
 );
 ```
 
-✅ Create table `temperatures_by_network`:
+✅ Create table `positions_by_account`:
 ```
-CREATE TABLE IF NOT EXISTS temperatures_by_network (
-  network TEXT,
-  week DATE,
-  date_hour TIMESTAMP,
-  sensor TEXT,
-  avg_temperature FLOAT,
-  latitude DECIMAL,
-  longitude DECIMAL,
-  PRIMARY KEY ((network,week),date_hour,sensor)
-) WITH CLUSTERING ORDER BY (date_hour DESC, sensor ASC);
-```
-
-✅ Create table `sensors_by_network`:
-```
-CREATE TABLE IF NOT EXISTS sensors_by_network (
-  network TEXT,
-  sensor TEXT,
-  latitude DECIMAL,
-  longitude DECIMAL,
-  characteristics MAP<TEXT,TEXT>,
-  PRIMARY KEY ((network),sensor)
+CREATE TABLE positions_by_account (
+  account TEXT,
+  symbol TEXT,
+  quantity DECIMAL,
+  PRIMARY KEY ((account),symbol)
 );
 ```
 
-
-✅ Create table `temperatures_by_sensor`:
+✅ Create table `trades_by_a_d`:
 ```
-CREATE TABLE IF NOT EXISTS temperatures_by_sensor (
-  sensor TEXT,
-  date DATE,
-  timestamp TIMESTAMP,
-  value FLOAT,
-  PRIMARY KEY ((sensor,date),timestamp)
-) WITH CLUSTERING ORDER BY (timestamp DESC);
+CREATE TABLE trades_by_a_d (
+  account TEXT,
+  trade_id TIMEUUID,
+  type TEXT,
+  symbol TEXT,
+  shares DECIMAL,
+  price DECIMAL,
+  amount DECIMAL,
+  PRIMARY KEY ((account),trade_id)
+) WITH CLUSTERING ORDER BY (trade_id DESC);
 ```
 
-✅ Verify that the four tables have been created:
+✅ Create table `trades_by_a_td`:
+```
+CREATE TABLE trades_by_a_td (
+  account TEXT,
+  trade_id TIMEUUID,
+  type TEXT,
+  symbol TEXT,
+  shares DECIMAL,
+  price DECIMAL,
+  amount DECIMAL,
+  PRIMARY KEY ((account),type,trade_id)
+) WITH CLUSTERING ORDER BY (type ASC, trade_id DESC);
+```
+
+✅ Create table `trades_by_a_std`:
+```
+CREATE TABLE trades_by_a_std (
+  account TEXT,
+  trade_id TIMEUUID,
+  type TEXT,
+  symbol TEXT,
+  shares DECIMAL,
+  price DECIMAL,
+  amount DECIMAL,
+  PRIMARY KEY ((account),symbol,type,trade_id)
+) WITH CLUSTERING ORDER BY (symbol ASC, type ASC, trade_id DESC);
+```
+
+✅ Create table `trades_by_a_sd`:
+```
+CREATE TABLE trades_by_a_sd (
+  account TEXT,
+  trade_id TIMEUUID,
+  type TEXT,
+  symbol TEXT,
+  shares DECIMAL,
+  price DECIMAL,
+  amount DECIMAL,
+  PRIMARY KEY ((account),symbol,trade_id)
+) WITH CLUSTERING ORDER BY (symbol ASC, trade_id DESC);
+```
+
+✅ Verify that the six tables have been created:
 ```
 DESCRIBE TABLES;
 ```

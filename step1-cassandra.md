@@ -30,9 +30,9 @@
 cqlsh
 ```
 
-✅ Create the `sensor_data` keyspace:
+✅ Create the `investment_data` keyspace:
 ```
-CREATE KEYSPACE sensor_data
+CREATE KEYSPACE investment_data
 WITH replication = {
   'class': 'NetworkTopologyStrategy', 
   'DC-Houston': 1 };
@@ -40,7 +40,7 @@ WITH replication = {
 
 ✅ Set the current working keyspace:
 ```
-USE sensor_data;
+USE investment_data;
 ```
 
 <!-- NAVIGATION -->
