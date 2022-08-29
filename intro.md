@@ -15,13 +15,13 @@
             <ul>
               <li><span class="scenario-description-attribute">Difficulty</span>: Beginner</li>
               <li><span class="scenario-description-attribute">Time</span>: 15 minutes</li>
-              <li><span class="scenario-description-attribute">Prerequisite</span>: <a href="https://www.datastax.com/learn/data-modeling-by-example/sensor-data-model" target="_blank">how to create a data model for temperature monitoring sensor networks</a></li>
+              <li><span class="scenario-description-attribute">Prerequisite</span>: <a href="https://www.datastax.com/learn/data-modeling-by-example/investment-data-model" target="_blank">how to create a data model for investment accounts or portfolios</a></li>
             </ul>
             <div class="scenario-objectives">In this scenario, you will:</div>
             <ul>
-              <li><span class="scenario-objective">Create tables for a sensor data use case</span></li>
-              <li><span class="scenario-objective">Populate tables with sample sensor data</span></li>
-              <li><span class="scenario-objective">Design and execute CQL queries over sensor data</span></li>
+              <li><span class="scenario-objective">Create tables for an investment portfolio data use case</span></li>
+              <li><span class="scenario-objective">Populate tables with sample investment portfolio data</span></li>
+              <li><span class="scenario-objective">Design and execute CQL queries over investment portfolio data</span></li>
             </ul>
       </div>
      </div>
