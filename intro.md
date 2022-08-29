@@ -11,7 +11,7 @@
     <div class="container px-4 py-2">
      <div class="row g-4 py-2 row-cols-1 row-cols-lg-1">
       <div class="feature col div-choice">
-            <div class="scenario-description">Explore how IoT sensor data can be stored and queried in Cassandra NoSQL database.</div>
+            <div class="scenario-description">Explore how investment portfolio data can be stored and queried in Cassandra NoSQL database.</div>
             <ul>
               <li><span class="scenario-description-attribute">Difficulty</span>: Beginner</li>
               <li><span class="scenario-description-attribute">Time</span>: 15 minutes</li>
