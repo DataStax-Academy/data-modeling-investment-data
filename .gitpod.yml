@@ -1,9 +1,9 @@
 tasks:
   - name: install-dependencies
     before: |
-      curl -Ls "https://dtsx.io/get-astra-cli" | bash >> ./install.log
       printf 'export PATH="$HOME%s:$PATH"\n' "/.astra/cli" >> $HOME/.bashrc
-      printf 'unset JAVA_TOOL_OPTIONS\n' >> $HOME/.bashrc      
+      printf 'unset JAVA_TOOL_OPTIONS\n' >> $HOME/.bashrc
+      curl -Ls "https://dtsx.io/get-astra-cli" | bash >> ./install.log
     init: |
       docker pull cassandra:4.0
       pip install -U cqlsh
