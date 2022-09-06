@@ -22,7 +22,7 @@
 
 ✅ Create table `accounts_by_user`:
 ```
-CREATE TABLE accounts_by_user (
+CREATE TABLE IF NOT EXISTS accounts_by_user (
   username TEXT,
   account_number TEXT,
   cash_balance DECIMAL,
@@ -33,7 +33,7 @@ CREATE TABLE accounts_by_user (
 
 ✅ Create table `positions_by_account`:
 ```
-CREATE TABLE positions_by_account (
+CREATE TABLE IF NOT EXISTS positions_by_account (
   account TEXT,
   symbol TEXT,
   quantity DECIMAL,
@@ -43,7 +43,7 @@ CREATE TABLE positions_by_account (
 
 ✅ Create table `trades_by_a_d`:
 ```
-CREATE TABLE trades_by_a_d (
+CREATE TABLE IF NOT EXISTS trades_by_a_d (
   account TEXT,
   trade_id TIMEUUID,
   type TEXT,
@@ -57,7 +57,7 @@ CREATE TABLE trades_by_a_d (
 
 ✅ Create table `trades_by_a_td`:
 ```
-CREATE TABLE trades_by_a_td (
+CREATE TABLE IF NOT EXISTS trades_by_a_td (
   account TEXT,
   trade_id TIMEUUID,
   type TEXT,
@@ -71,7 +71,7 @@ CREATE TABLE trades_by_a_td (
 
 ✅ Create table `trades_by_a_std`:
 ```
-CREATE TABLE trades_by_a_std (
+CREATE TABLE IF NOT EXISTS trades_by_a_std (
   account TEXT,
   trade_id TIMEUUID,
   type TEXT,
@@ -85,7 +85,7 @@ CREATE TABLE trades_by_a_std (
 
 ✅ Create table `trades_by_a_sd`:
 ```
-CREATE TABLE trades_by_a_sd (
+CREATE TABLE IF NOT EXISTS trades_by_a_sd (
   account TEXT,
   trade_id TIMEUUID,
   type TEXT,
